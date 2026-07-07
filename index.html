@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>やまがたeスポーツフェスタ2026inSEIZAN</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Noto+Sans+JP', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* BMSG風の背景演出 */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="font-oswald text-2xl tracking-tighter">YAMAGATA e-SPORTS 2026</div>
+        <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
+            <a href="#about" class="hover:text-gray-400 transition">About</a>
+            <a href="#games" class="hover:text-gray-400 transition">Titles</a>
+            <a href="#schools" class="hover:text-gray-400 transition">Schools</a>
+            <a href="#links" class="hover:text-gray-400 transition">Join Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+        <div data-aos="fade-up" data-aos-duration="1500">
+            <p class="font-oswald text-xl md:text-2xl tracking-[0.5em] mb-4 text-gray-400">IN SEIZAN</p>
+            <h1 class="font-oswald text-5xl md:text-8xl leading-tight mb-8 gradient-text">
+                YAMAGATA e-SPORTS<br>FESTA 2026
+            </h1>
+            <p class="max-w-2xl mx-auto text-sm md:text-base leading-relaxed tracking-widest text-gray-300">
+                山形の冬を熱くする、eスポーツの祭典が幕を開ける！<br>
+                地域の絆と興奮が交差する、次世代のコミュニティイベント。
+            </p>
+        </div>
+        <!-- Scroll Down -->
+        <div class="absolute bottom-10 animate-bounce text-xs tracking-widest text-gray-500 uppercase">Scroll Down</div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div data-aos="fade-up">
+            <h2 class="font-oswald text-4xl mb-12 italic border-b border-white/20 inline-block pb-2">INTRODUCTION</h2>
+            <p class="text-lg leading-loose text-left md:text-center">
+                メインのVALORANT学校対抗戦では、山形大・東北大・惺山高校など6校が激突！当日参加の即席チーム戦もあり、誰もが主役になれます。スト6、グランツーリスモ、最新のHADOやVR体験も充実。さらに大人限定のスト6前夜祭も開催！運営の主体は惺山高校e-Sports部。ゲーマーも家族連れも全力で楽しめる空間を創り上げます。マイデバイス持参も大歓迎！この場所から、eスポーツの力で地域を、そして未来を熱狂させよう。
+            </p>
+        </div>
+    </section>
+
+    <!-- Game Titles Grid -->
+    <section id="games" class="py-24 px-6 bg-white/5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-oswald text-4xl mb-16 text-center tracking-tighter" data-aos="fade-right">LINE UP</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- VALORANT -->
+                <div class="glass-card p-8 group hover:bg-white/10 transition" data-aos="zoom-in">
+                    <div class="h-48 bg-gray-800 mb-6 flex items-center justify-center overflow-hidden">
+                        <!-- 代替画像 -->
+                        <span class="text-gray-500 font-oswald text-xl uppercase italic">VALORANT</span>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-2">VALORANT</h3>
+                    <p class="text-sm text-gray-400">学校対抗エキシビションマッチ / 即席チーム対戦会</p>
+                </div>
+                <!-- SF6 -->
+                <div class="glass-card p-8 group hover:bg-white/10 transition" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-48 bg-gray-800 mb-6 flex items-center justify-center overflow-hidden">
+                        <span class="text-gray-500 font-oswald text-xl uppercase italic">STREET FIGHTER 6</span>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-2">ストリートファイター6</h3>
+                    <p class="text-sm text-gray-400">対戦会・体験会 / 大人限定前夜祭あり</p>
+                </div>
+                <!-- Other Titles -->
+                <div class="glass-card p-8 group hover:bg-white/10 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-48 bg-gray-800 mb-6 flex items-center justify-center overflow-hidden">
+                        <span class="text-gray-500 font-oswald text-xl uppercase italic">AND MORE...</span>
+                    </div>
+                    <h3 class="font-bold text-2xl mb-2">OTHER TITLES</h3>
+                    <p class="text-sm text-gray-400 text-left">グランツーリスモ、HADO、山形大学VR部によるVR体験</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schools Section -->
+    <section id="schools" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="font-oswald text-4xl mb-16 italic" data-aos="fade-up">ATTENDING SCHOOLS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="border-l-2 border-white/30 pl-4 text-left" data-aos="fade-left">山形大学</div>
+                <div class="border-l-2 border-white/30 pl-4 text-left" data-aos="fade-left" data-aos-delay="100">東北大学</div>
+                <div class="border-l-2 border-white/30 pl-4 text-left" data-aos="fade-left" data-aos-delay="200">仙台城南高校</div>
+                <div class="border-l-2 border-white/30 pl-4 text-left" data-aos="fade-left" data-aos-delay="300">仙台デザイン＆テクノロジー専門学校</div>
+                <div class="border-l-2 border-white/30 pl-4 text-left" data-aos="fade-left" data-aos-delay="400">東北芸術工科大学</div>
+                <div class="border-l-2 border-white/30 pl-4 text-left text-blue-400 font-bold underline" data-aos="fade-left" data-aos-delay="500">惺山高等学校</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social / Join Section -->
+    <section id="links" class="py-24 px-6 bg-white text-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-oswald text-4xl mb-12">CONNECT WITH US</h2>
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a href="#" class="text-4xl hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-4xl hover:scale-110 transition"><i class="fab fa-discord"></i></a>
+                <a href="#" class="text-4xl hover:scale-110 transition"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="text-4xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="space-y-4">
+                <p class="text-sm font-bold tracking-widest uppercase">Streaming & Community</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#" class="bg-black text-white px-8 py-4 font-bold hover:bg-gray-800 transition">YouTube 配信を視聴</a>
+                    <a href="#" class="border-2 border-black px-8 py-4 font-bold hover:bg-black hover:text-white transition">Discord コミュニティに参加</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Section -->
+    <section class="py-16 px-6 opacity-60">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xs tracking-widest mb-8 uppercase">Special Sponsors</p>
+            <div class="flex flex-wrap justify-center gap-12 text-sm">
+                <span>ベルブランシェ・プチ</span>
+                <span>井上工業（株）</span>
+                <span>東北クリーン開発（株）</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center text-xs text-gray-500 tracking-widest">
+        <p>Managed by SEIZAN High School e-Sports Club</p>
+        <p class="mt-2">&copy; 2026 YAMAGATA e-SPORTS FESTA</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
