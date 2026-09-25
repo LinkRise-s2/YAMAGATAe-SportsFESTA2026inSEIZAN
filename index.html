@@ -91,71 +91,84 @@
         </div>
     </section>
 
-    <!-- Game Lineup Section -->
-    <section id="lineup" class="py-24 px-6 bg-white/5">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="font-title text-5xl mb-16 italic tracking-tighter" data-aos="fade-right">LINE UP</h2>
+   <!-- Game Lineup Section (参考サイトのスタイルを再現) -->
+    <section id="lineup" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-12" data-aos="fade-right">
+                <h2 class="font-title text-5xl md:text-7xl italic tracking-tighter">LINE UP</h2>
+                <p class="text-xs md:text-sm font-bold tracking-widest pb-2 opacity-60 uppercase">Select Title to Details</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                <!-- VALORANT -->
-                <a href="valorant-detail.html" class="glass-card overflow-hidden block" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VALORANT" alt="VALORANT" class="w-full h-48 object-cover">
-                    <div class="p-8 border-l-4 border-pink">
-                        <h3 class="font-title text-2xl mb-4 italic">VALORANT</h3>
-                        <p class="text-gray-300 text-sm leading-loose">
-                            学校対抗エキシビションマッチ！<br>
-                            当日参加の即席チーム戦も開催。<br>
-                            <span class="accent-pink font-bold">★マイデバイス持ち込みOK</span>
+            <div class="border-t border-white/20">
+                <!-- 01: VALORANT -->
+                <a href="valorant-detail.html" class="group flex items-center py-8 md:py-12 border-b border-white/20 hover:bg-pink transition-all duration-500 px-4 relative overflow-hidden" data-aos="fade-up">
+                    <span class="font-title text-2xl md:text-4xl mr-8 opacity-30 group-hover:opacity-100 transition-opacity">01</span>
+                    <div class="flex-grow">
+                        <h3 class="font-title text-2xl md:text-5xl italic uppercase group-hover:translate-x-4 transition-transform duration-500">VALORANT</h3>
+                        <p class="text-xs md:text-base font-bold mt-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-4 transition-transform duration-500 leading-relaxed">
+                            学校対抗エキシビションマッチ / 即席チーム参戦会 <br class="md:hidden">
+                            <span class="bg-pink text-white group-hover:bg-white group-hover:text-pink px-2 py-0.5 ml-0 md:ml-4 inline-block mt-2 md:mt-0 font-bold">★マイデバイス持ち込みOK</span>
                         </p>
+                    </div>
+                    <div class="text-4xl group-hover:translate-x-2 transition-transform duration-500">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </a>
 
-                <!-- SF6 -->
-                <a href="sf6-detail.html" class="glass-card overflow-hidden block" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=StreetFighter6" alt="SF6" class="w-full h-48 object-cover">
-                    <div class="p-8 border-l-4 border-pink">
-                        <h3 class="font-title text-2xl mb-4 italic text-nowrap">Street Fighter 6</h3>
-                        <p class="text-gray-300 text-sm leading-loose">
-                            ガチ対戦会＆初心者体験会。<br>
-                            さらに大人限定の「前夜祭」も！<br>
-                            <span class="accent-pink font-bold">★マイデバイス持ち込みOK</span>
+                <!-- 02: Street Fighter 6 -->
+                <a href="sf6-detail.html" class="group flex items-center py-8 md:py-12 border-b border-white/20 hover:bg-pink transition-all duration-500 px-4 relative overflow-hidden" data-aos="fade-up">
+                    <span class="font-title text-2xl md:text-4xl mr-8 opacity-30 group-hover:opacity-100 transition-opacity">02</span>
+                    <div class="flex-grow">
+                        <h3 class="font-title text-2xl md:text-5xl italic uppercase group-hover:translate-x-4 transition-transform duration-500">Street Fighter 6</h3>
+                        <p class="text-xs md:text-base font-bold mt-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-4 transition-transform duration-500 leading-relaxed">
+                            対戦会・体験会 / 大人限定前夜祭 <br class="md:hidden">
+                            <span class="bg-pink text-white group-hover:bg-white group-hover:text-pink px-2 py-0.5 ml-0 md:ml-4 inline-block mt-2 md:mt-0 font-bold">★マイデバイス持ち込みOK</span>
                         </p>
+                    </div>
+                    <div class="text-4xl group-hover:translate-x-2 transition-transform duration-500">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </a>
 
-                <!-- HADO -->
-                <a href="hado-detail.html" class="glass-card overflow-hidden block" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=HADO" alt="HADO" class="w-full h-48 object-cover">
-                    <div class="p-8 border-l-4 border-pink">
-                        <h3 class="font-title text-2xl mb-4 italic">HADO</h3>
-                        <p class="text-gray-300 text-sm leading-loose">
-                            AR（拡張現実）で行う最新スポーツ。<br>
-                            魔法のようなエナジーボールを放て！
+                <!-- 03: HADO -->
+                <a href="hado-detail.html" class="group flex items-center py-8 md:py-12 border-b border-white/20 hover:bg-pink transition-all duration-500 px-4 relative overflow-hidden" data-aos="fade-up">
+                    <span class="font-title text-2xl md:text-4xl mr-8 opacity-30 group-hover:opacity-100 transition-opacity">03</span>
+                    <div class="flex-grow">
+                        <h3 class="font-title text-2xl md:text-5xl italic uppercase group-hover:translate-x-4 transition-transform duration-500">HADO</h3>
+                        <p class="text-xs md:text-base font-bold mt-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-4 transition-transform duration-500">
+                            AR（拡張現実）最新 eスポーツ体験会
                         </p>
+                    </div>
+                    <div class="text-4xl group-hover:translate-x-2 transition-transform duration-500">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </a>
 
-                <!-- GT -->
-                <a href="gt-detail.html" class="glass-card overflow-hidden block" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=GranTurismo" alt="GT" class="w-full h-48 object-cover">
-                    <div class="p-8 border-l-4 border-pink">
-                        <h3 class="font-title text-2xl mb-4 italic">Gran Turismo</h3>
-                        <p class="text-gray-300 text-sm leading-loose">
-                            究極のリアルドライビング体験。<br>
-                            本格シミュレーターで最速を目指せ。
+                <!-- 04: Gran Turismo -->
+                <a href="gt-detail.html" class="group flex items-center py-8 md:py-12 border-b border-white/20 hover:bg-pink transition-all duration-500 px-4 relative overflow-hidden" data-aos="fade-up">
+                    <span class="font-title text-2xl md:text-4xl mr-8 opacity-30 group-hover:opacity-100 transition-opacity">04</span>
+                    <div class="flex-grow">
+                        <h3 class="font-title text-2xl md:text-5xl italic uppercase group-hover:translate-x-4 transition-transform duration-500">Gran Turismo</h3>
+                        <p class="text-xs md:text-base font-bold mt-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-4 transition-transform duration-500">
+                            リアルドライビングシミュレーター体験会
                         </p>
+                    </div>
+                    <div class="text-4xl group-hover:translate-x-2 transition-transform duration-500">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </a>
 
-                <!-- VR -->
-                <a href="vr-detail.html" class="glass-card overflow-hidden block" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VR+Experience" alt="VR" class="w-full h-48 object-cover">
-                    <div class="p-8 border-l-4 border-pink">
-                        <h3 class="font-title text-2xl mb-4 italic uppercase">VR Experience</h3>
-                        <p class="text-gray-300 text-sm leading-loose">
-                            山形大学VR部によるVR体験会。<br>
-                            仮想世界が現実を凌駕する。
+                <!-- 05: VR Experience -->
+                <a href="vr-detail.html" class="group flex items-center py-8 md:py-12 border-b border-white/20 hover:bg-pink transition-all duration-500 px-4 relative overflow-hidden" data-aos="fade-up">
+                    <span class="font-title text-2xl md:text-4xl mr-8 opacity-30 group-hover:opacity-100 transition-opacity">05</span>
+                    <div class="flex-grow">
+                        <h3 class="font-title text-2xl md:text-5xl italic uppercase group-hover:translate-x-4 transition-transform duration-500 text-nowrap">VR Experience</h3>
+                        <p class="text-xs md:text-base font-bold mt-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-4 transition-transform duration-500">
+                            山形大学VR部による最新VR体験会
                         </p>
+                    </div>
+                    <div class="text-4xl group-hover:translate-x-2 transition-transform duration-500">
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </a>
             </div>
