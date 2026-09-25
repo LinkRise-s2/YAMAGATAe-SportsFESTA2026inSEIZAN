@@ -83,19 +83,35 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
-        <div data-aos="fade-up" data-aos-duration="1200">
+    <!-- Hero Section (コスプレミーティングをサブ感なく特大タイトルへ変更) -->
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-28 pb-20">
+        <div data-aos="fade-up" data-aos-duration="1200" class="max-w-5xl mx-auto w-full">
             <p class="font-bold text-sm md:text-base tracking-[0.25em] mb-6 accent-pink uppercase">
                 〜 高校生が作るeスポーツイベント 〜
             </p>
-            <h1 class="font-title text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight leading-tight">
-                やまがた<br>eスポーツフェスタ<br>
-                <span class="text-6xl md:text-8xl lg:text-9xl accent-pink inline-block mt-2 font-eng">in SEIZAN</span>
+            
+            <!-- メインタイトル 1 -->
+            <h1 class="font-title text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-tight">
+                やまがた<br class="sm:hidden">eスポーツフェスタ<br>
+                <span class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl accent-pink inline-block mt-1 font-eng">in SEIZAN</span>
             </h1>
-            <div class="bg-white/10 border border-white/20 text-white backdrop-blur-md px-6 py-2.5 mb-8 inline-block font-bold text-sm md:text-lg tracking-widest rounded-full">
-                同時開催：やまがたコスプレミーティング
+
+            <!-- 同時開催セパレーター（同格イベントとして連結） -->
+            <div class="my-6 md:my-8 flex items-center justify-center gap-4">
+                <span class="h-[2px] w-12 sm:w-24 bg-gradient-to-r from-transparent via-pink-500 to-pink-500"></span>
+                <span class="bg-pink text-white text-xs sm:text-sm font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-[0_0_20px_rgba(255,0,122,0.7)] flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+                    同時開催
+                </span>
+                <span class="h-[2px] w-12 sm:w-24 bg-gradient-to-l from-transparent via-pink-500 to-pink-500"></span>
             </div>
+
+            <!-- メインタイトル 2 (サブ感をなくした大型タイトル) -->
+            <h2 class="font-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white mb-10 leading-tight drop-shadow-[0_0_25px_rgba(255,0,122,0.35)]">
+                やまがた<br class="sm:hidden">コスプレミーティング
+            </h2>
+
+            <!-- 日時情報 -->
             <p class="text-3xl md:text-5xl font-title tracking-tight mb-4 flex items-center justify-center gap-3">
                 11.8 <span class="text-lg md:text-xl font-bold bg-pink px-2.5 py-0.5 rounded text-white font-sans">SAT</span> 
                 <span class="text-xl md:text-3xl text-gray-300 font-sans font-semibold">10:30 - 15:00</span>
@@ -231,7 +247,7 @@
         </div>
     </section>
 
-    <!-- Guest Section (ラインナップの直下に移動) -->
+    <!-- Guest Section (ラインナップの直下) -->
     <section id="guests" class="py-24 px-6 border-t border-white/10">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-4">
@@ -289,7 +305,7 @@
         </div>
     </section>
 
-    <!-- Cosplay Section (見やすい配色に大幅改善) -->
+    <!-- Cosplay Section (見やすい配色) -->
     <section id="cosplay" class="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#120410] via-[#1a0617] to-[#0a0009] border-y border-pink-500/30">
         <!-- 柔らかなピンクのバックライト -->
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-pink-600/20 rounded-full blur-[120px] pointer-events-none"></div>
@@ -343,7 +359,7 @@
         </div>
     </section>
 
-    <!-- SNS & Links (YouTube生配信 ＆ Discord参加必須の明確化) -->
+    <!-- SNS & Links (YouTube生配信 ＆ Discord参加必須の案内) -->
     <section id="community" class="py-24 px-6 bg-white text-black text-center">
         <div class="max-w-5xl mx-auto">
             <span class="text-xs font-bold uppercase tracking-widest text-pink-600 block mb-2">Live Stream & Official Community</span>
@@ -353,7 +369,7 @@
                 さらに、大会エントリー選手・当日参加者は連絡ツールとして公式Discordへの参加が必須となります。
             </p>
 
-            <!-- 2大重要アクション：YouTube配信 & Discord参加 -->
+            <!-- YouTube配信 & Discord参加 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 text-left">
                 <!-- YouTube 生配信案内 -->
                 <div class="bg-gray-50 border-2 border-gray-200 rounded-2xl p-8 flex flex-col justify-between hover:border-red-500 transition duration-300 shadow-sm">
