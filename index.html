@@ -6,6 +6,7 @@
     <title>やまがたeスポーツフェスタ2026inSEIZAN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: スタイリッシュで見やすい Montserrat, Teko, Noto Sans JP を採用 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Noto+Sans+JP:wght@400;500;700;900&family=Teko:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -82,7 +83,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section (コスプレミーティングを超特大化しサブ感を完全排除) -->
+    <!-- Hero Section -->
     <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-28 pb-16">
         <div data-aos="fade-up" data-aos-duration="1200" class="max-w-6xl mx-auto w-full">
             <p class="font-bold text-sm md:text-base tracking-[0.25em] mb-6 accent-pink uppercase">
@@ -310,7 +311,7 @@
         </div>
     </section>
 
-    <!-- Cosplay Section (見やすい配色) -->
+    <!-- Cosplay Section (コスプレゲスト「いなさん」「上原りせさん」追加) -->
     <section id="cosplay" class="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#120410] via-[#1a0617] to-[#0a0009] border-y border-pink-500/30">
         <!-- 柔らかなピンクのバックライト -->
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-pink-600/20 rounded-full blur-[120px] pointer-events-none"></div>
@@ -329,13 +330,35 @@
         
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
             <div data-aos="fade-right">
-                <p class="text-lg md:text-xl font-bold leading-relaxed mb-8 text-gray-100">
+                <p class="text-lg md:text-xl font-bold leading-relaxed mb-6 text-gray-100">
                     コスプレを通じて、つながる、広がる、最高の一日を。<br>
                     初心者・ベテラン大歓迎！<br>
                     コスプレステージショーも開催！
                 </p>
 
-                <!-- 視認性を高めたカードスタイル情報ボックス -->
+                <!-- スペシャルゲスト紹介枠（いなさん、上原りせさん） -->
+                <div class="bg-gradient-to-r from-pink-950/40 to-black/60 border border-pink-500/40 rounded-xl p-5 mb-6 shadow-lg">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-pink text-white text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                            Special Guests
+                        </span>
+                        <span class="text-xs text-pink-300 font-bold">ゲストコスプレイヤー来場決定！</span>
+                    </div>
+                    <div class="flex flex-wrap items-baseline gap-4 mt-2">
+                        <div class="font-title text-2xl text-white">
+                            いな <span class="text-xs font-normal text-gray-300">さん</span>
+                        </div>
+                        <div class="text-pink-500 font-bold">/</div>
+                        <div class="font-title text-2xl text-white">
+                            上原りせ <span class="text-xs font-normal text-gray-300">さん</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-300 mt-2 leading-relaxed">
+                        人気コスプレイヤーのお二人がゲストとして会場に登場！特設ステージや撮影スポットを華やかに盛り上げます。
+                    </p>
+                </div>
+
+                <!-- 撮影スポット & 参加ジャンル情報ボックス -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                     <div class="bg-black/60 border border-pink-500/30 p-5 rounded-lg shadow-lg">
                         <p class="accent-pink mb-3 font-title text-base flex items-center gap-2">
@@ -357,9 +380,26 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ゲスト写真ギャラリー -->
             <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                <img src="https://via.placeholder.com/400x600/1e1022/ffffff?text=Cosplayer+1" class="aspect-[3/4] object-cover w-full shadow-2xl rounded-lg border border-pink-500/20">
-                <img src="https://via.placeholder.com/400x600/1e1022/ffffff?text=Cosplayer+2" class="aspect-[3/4] object-cover w-full shadow-2xl rounded-lg border border-pink-500/20 mt-10">
+                <!-- いなさん 写真カード -->
+                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30">
+                    <img src="https://via.placeholder.com/400x600/1e1022/ffffff?text=INA" alt="いな さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest Cosplayer</span>
+                        <h4 class="font-title text-xl text-white">いな <span class="text-xs font-normal text-gray-300">さん</span></h4>
+                    </div>
+                </div>
+
+                <!-- 上原りせさん 写真カード -->
+                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30 mt-10">
+                    <img src="https://via.placeholder.com/400x600/1e1022/ffffff?text=RISE+UEHARA" alt="上原りせ さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest Cosplayer</span>
+                        <h4 class="font-title text-xl text-white">上原りせ <span class="text-xs font-normal text-gray-300">さん</span></h4>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
