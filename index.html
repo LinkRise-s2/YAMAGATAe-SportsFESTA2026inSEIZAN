@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>やまがたeスポーツフェスタ2026inSEIZAN</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <!-- AOS Animation Library -->
+    <!-- Google Fonts: 迫力のある日本語フォントを追加 -->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -20,26 +17,36 @@
             font-family: 'Noto+Sans+JP', sans-serif;
             overflow-x: hidden;
         }
+        /* チラシのような力強いフォント設定 */
+        .font-title { font-family: 'Dela Gothic One', cursive; font-weight: 900; }
         .font-oswald { font-family: 'Oswald', sans-serif; }
+        
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
         .accent-pink { color: #FF007A; }
         .bg-pink { background-color: #FF007A; }
         .border-pink { border-color: #FF007A; }
         
-        .gradient-text {
-            background: linear-gradient(90deg, #fff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         .bg-glow {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
             z-index: -1;
+        }
+
+        /* 詳細表示用のアニメーション */
+        .detail-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .active .detail-content {
+            max-height: 500px;
         }
     </style>
 </head>
@@ -48,7 +55,7 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div class="font-oswald text-xl md:text-2xl tracking-tighter italic">YAMAGATA e-SPORTS FESTA</div>
+        <div class="font-title text-lg md:text-xl tracking-tighter italic">YAMAGATA e-SPORTS</div>
         <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
             <a href="#about" class="hover:text-pink-500 transition">About</a>
             <a href="#lineup" class="hover:text-pink-500 transition">Lineup</a>
@@ -60,25 +67,24 @@
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
         <div data-aos="fade-up" data-aos-duration="1500">
-            <p class="font-oswald text-lg md:text-xl tracking-[0.3em] mb-4 accent-pink font-bold">高校生が作るeスポーツイベント</p>
-            <h1 class="font-oswald text-4xl md:text-7xl leading-tight mb-4">
+            <p class="font-title text-lg md:text-xl tracking-[0.2em] mb-6 accent-pink">〜 高校生が作るeスポーツイベント 〜</p>
+            <h1 class="font-title text-4xl md:text-7xl leading-tight mb-4 tracking-tighter">
                 やまがたeスポーツフェスタ2026<br>
                 <span class="text-6xl md:text-8xl">in SEIZAN</span>
             </h1>
-            <div class="bg-white text-black px-6 py-2 mb-8 inline-block font-bold text-xl italic tracking-widest">
+            <div class="bg-white text-black px-6 py-2 mb-8 inline-block font-title text-xl italic tracking-widest">
                 同時開催：やまがたコスプレミーティング
             </div>
-            <p class="text-2xl md:text-4xl font-bold tracking-tighter mb-4">
+            <p class="text-2xl md:text-4xl font-title tracking-tighter mb-4">
                 11.8 <span class="text-lg">SAT</span> 10:30 - 15:00
             </p>
-            <p class="text-gray-400 tracking-widest">場所：惺山高等学校 本校第一体育館・第二体育館</p>
         </div>
     </section>
 
-    <!-- Red Bull Section (Special) -->
+    <!-- Red Bull Section -->
     <section class="py-20 px-6 bg-gradient-to-r from-blue-900/40 to-red-900/40 border-y border-white/10">
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
-            <h2 class="font-oswald text-5xl md:text-7xl mb-6 italic tracking-tighter">RED BULL TRUCK IS COMING!</h2>
+            <h2 class="font-title text-5xl md:text-7xl mb-6 italic tracking-tighter">RED BULL TRUCK IS COMING!</h2>
             <p class="text-xl md:text-2xl font-bold leading-relaxed tracking-widest">
                 あのレッドブルトラックが<br>
                 惺山の会場に。最強の翼を授かり、<br>
@@ -87,72 +93,81 @@
         </div>
     </section>
 
-    <!-- Introduction Section -->
-    <section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div data-aos="fade-up">
-            <h2 class="font-oswald text-4xl mb-12 italic border-b-4 border-pink inline-block pb-2">ABOUT</h2>
-            <p class="text-lg leading-loose md:text-xl font-bold tracking-widest">
-                山形の冬を熱くする、eスポーツの祭典。<br>
-                地域の絆と興奮が交差する、<br>
-                次世代のコミュニティイベントが開幕！<br>
-                <br>
-                運営の主体は、惺山高校e-Sports部。<br>
-                ゲーマーも、コスプレイヤーも、家族連れも。<br>
-                誰もが「なりたい自分」になれる場所。<br>
-                マイデバイス持参も大歓迎！
-            </p>
-        </div>
-    </section>
-
     <!-- Game Lineup Section -->
     <section id="lineup" class="py-24 px-6 bg-white/5">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-oswald text-5xl mb-16 text-center italic tracking-tighter" data-aos="fade-right">E-SPORTS LINE UP</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-title text-5xl mb-8 italic tracking-tighter" data-aos="fade-right">LINE UP</h2>
+            <p class="mb-12 text-gray-400 font-bold tracking-widest">タップして詳細をチェック</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                 <!-- VALORANT -->
-                <div class="glass-card p-8 border-l-4 border-pink" data-aos="fade-up">
-                    <h3 class="font-oswald text-3xl mb-4 italic uppercase">VALORANT</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        学校対抗エキシビションマッチ！<br>
-                        当日参加の即席チーム戦も開催。<br>
-                        君のエイムで会場を沸かせろ。
-                    </p>
+                <div class="glass-card overflow-hidden" onclick="this.classList.toggle('active')" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VALORANT" alt="VALORANT" class="w-full h-48 object-cover">
+                    <div class="p-8 border-l-4 border-pink">
+                        <h3 class="font-title text-2xl mb-2 italic">VALORANT</h3>
+                        <p class="text-pink-500 text-xs font-bold mb-4 uppercase">Click for Details</p>
+                        <div class="detail-content text-gray-300 leading-loose">
+                            学校対抗エキシビションマッチ！<br>
+                            当日参加の即席チーム戦も開催。<br>
+                            君のエイムで会場を沸かせろ。
+                        </div>
+                    </div>
                 </div>
+
                 <!-- SF6 -->
-                <div class="glass-card p-8 border-l-4 border-pink" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="font-oswald text-3xl mb-4 italic uppercase">Street Fighter 6</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        ガチ対戦会＆初心者体験会。<br>
-                        さらに大人限定の「前夜祭」も！<br>
-                        拳で語り合う熱い時間を。
-                    </p>
+                <div class="glass-card overflow-hidden" onclick="this.classList.toggle('active')" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=StreetFighter6" alt="SF6" class="w-full h-48 object-cover">
+                    <div class="p-8 border-l-4 border-pink">
+                        <h3 class="font-title text-2xl mb-2 italic">Street Fighter 6</h3>
+                        <p class="text-pink-500 text-xs font-bold mb-4 uppercase">Click for Details</p>
+                        <div class="detail-content text-gray-300 leading-loose">
+                            ガチ対戦会＆初心者体験会。<br>
+                            さらに大人限定の「前夜祭」も！<br>
+                            拳で語り合う熱い時間を。
+                        </div>
+                    </div>
                 </div>
+
                 <!-- HADO -->
-                <div class="glass-card p-8 border-l-4 border-pink" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-oswald text-3xl mb-4 italic uppercase">HADO</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        AR（拡張現実）で行う最新スポーツ。<br>
-                        魔法のようなエナジーボールを放て！<br>
-                        未体験の感動をその手に。
-                    </p>
+                <div class="glass-card overflow-hidden" onclick="this.classList.toggle('active')" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=HADO" alt="HADO" class="w-full h-48 object-cover">
+                    <div class="p-8 border-l-4 border-pink">
+                        <h3 class="font-title text-2xl mb-2 italic">HADO</h3>
+                        <p class="text-pink-500 text-xs font-bold mb-4 uppercase">Click for Details</p>
+                        <div class="detail-content text-gray-300 leading-loose">
+                            AR（拡張現実）で行う最新スポーツ。<br>
+                            魔法のようなエナジーボールを放て！<br>
+                            未体験の感動をその手に。
+                        </div>
+                    </div>
                 </div>
+
                 <!-- GT -->
-                <div class="glass-card p-8 border-l-4 border-pink" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="font-oswald text-3xl mb-4 italic uppercase">Gran Turismo</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        究極のリアルドライビング体験。<br>
-                        コンマ一秒を削り出す、<br>
-                        本格シミュレーターで最速を目指せ。
-                    </p>
+                <div class="glass-card overflow-hidden" onclick="this.classList.toggle('active')" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=GranTurismo" alt="GT" class="w-full h-48 object-cover">
+                    <div class="p-8 border-l-4 border-pink">
+                        <h3 class="font-title text-2xl mb-2 italic">Gran Turismo</h3>
+                        <p class="text-pink-500 text-xs font-bold mb-4 uppercase">Click for Details</p>
+                        <div class="detail-content text-gray-300 leading-loose">
+                            究極のリアルドライビング体験。<br>
+                            コンマ一秒を削り出す、<br>
+                            本格シミュレーターで最速を目指せ。
+                        </div>
+                    </div>
                 </div>
+
                 <!-- VR -->
-                <div class="glass-card p-8 border-l-4 border-pink" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="font-oswald text-3xl mb-4 italic uppercase">VR Experience</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        山形大学VR部によるVR体験会。<br>
-                        仮想世界が現実を凌駕する。<br>
-                        最先端の没入体験を楽しもう。
-                    </p>
+                <div class="glass-card overflow-hidden" onclick="this.classList.toggle('active')" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VR+Experience" alt="VR" class="w-full h-48 object-cover">
+                    <div class="p-8 border-l-4 border-pink">
+                        <h3 class="font-title text-2xl mb-2 italic">VR EXPERIENCE</h3>
+                        <p class="text-pink-500 text-xs font-bold mb-4 uppercase">Click for Details</p>
+                        <div class="detail-content text-gray-300 leading-loose">
+                            山形大学VR部によるVR体験会。<br>
+                            仮想世界が現実を凌駕する。<br>
+                            最先端の没入体験を楽しもう。
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,30 +175,35 @@
 
     <!-- Cosplay Section -->
     <section id="cosplay" class="py-24 px-6 bg-pink text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="font-title text-5xl md:text-8xl mb-4 italic leading-tight" data-aos="fade-up">
+                やまがた<br>コスプレミーティング
+            </h2>
+            <p class="font-title text-2xl md:text-4xl italic opacity-90" data-aos="fade-up">なりたい自分になれ。</p>
+        </div>
+        
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
-                <p class="font-bold tracking-[0.3em] mb-2">やまがたコスプレミーティング</p>
-                <h2 class="font-oswald text-6xl md:text-8xl mb-8 italic leading-tight">なりたい<br>自分に<br>なれ。</h2>
                 <p class="text-xl font-bold leading-loose mb-8">
                     コスプレを通じて、つながる、広がる、<br>
                     最高の一日を。初心者・ベテラン大歓迎！<br>
                     コスプレステージショーもあり！
                 </p>
-                <div class="grid grid-cols-2 gap-4 text-sm font-bold border-t border-white/30 pt-6">
+                <div class="grid grid-cols-2 gap-4 text-sm font-bold border-t border-white/30 pt-6 text-left">
                     <div>
-                        <p class="opacity-70 mb-2">＜＜撮影スポット＞＞</p>
+                        <p class="opacity-70 mb-2 font-title">撮影スポット</p>
                         <ul><li>教室 / 廊下 / グラウンド</li><li>eスポーツイベント会場</li></ul>
                     </div>
                     <div>
-                        <p class="opacity-70 mb-2">＜＜参加ジャンル＞＞</p>
-                        <ul><li>ゲームキャラ / スクールキャラ</li><li>一眼レフ / デジタルカメラ</li></ul>
+                        <p class="opacity-70 mb-2 font-title">参加ジャンル</p>
+                        <ul><li>ゲームキャラ / スクールキャラ</li><li>一眼レフ / デジカメ</li></ul>
                     </div>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                <!-- Image Placeholders -->
-                <div class="aspect-[3/4] bg-black/20 flex items-center justify-center text-xs uppercase tracking-widest">Cosplayer 1</div>
-                <div class="aspect-[3/4] bg-black/20 flex items-center justify-center text-xs uppercase tracking-widest mt-12">Cosplayer 2</div>
+                <!-- 写真プレースホルダー -->
+                <img src="https://via.placeholder.com/400x600/000000/ffffff?text=Cosplayer+Photo+1" class="aspect-[3/4] object-cover w-full shadow-2xl rounded">
+                <img src="https://via.placeholder.com/400x600/000000/ffffff?text=Cosplayer+Photo+2" class="aspect-[3/4] object-cover w-full shadow-2xl rounded mt-12">
             </div>
         </div>
     </section>
@@ -191,23 +211,36 @@
     <!-- Guest Section -->
     <section id="guests" class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="font-oswald text-5xl mb-16 text-center italic" data-aos="fade-up">GUESTS & CREW</h2>
+            <h2 class="font-title text-5xl mb-16 text-center italic" data-aos="fade-up">GUESTS & CREW</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="glass-card p-6" data-aos="flip-left">
-                    <p class="accent-pink font-bold mb-2 uppercase text-xs tracking-widest">Broadcasting</p>
-                    <h3 class="text-xl font-bold mb-4">仙台デザイン＆<br>テクノロジー専門学校</h3>
-                    <p class="text-sm text-gray-400">現場配信・YouTube配信を<br>プロのクオリティでサポート</p>
+                
+                <div class="glass-card p-0 overflow-hidden" data-aos="flip-left">
+                    <img src="https://via.placeholder.com/400x400/1a1a1a/ffffff?text=Sendai+Design" alt="Sendai Design" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <p class="accent-pink font-bold mb-2 uppercase text-xs tracking-widest font-title">Broadcasting</p>
+                        <h3 class="text-lg font-title mb-4 leading-tight">仙台デザイン＆<br>テクノロジー専門学校</h3>
+                        <p class="text-sm text-gray-400">現場配信・YouTube配信をサポート</p>
+                    </div>
                 </div>
-                <div class="glass-card p-6" data-aos="flip-left" data-aos-delay="100">
-                    <p class="accent-pink font-bold mb-2 uppercase text-xs tracking-widest">VALORANT MC</p>
-                    <h3 class="text-2xl font-bold mb-4 italic">けーしん さん</h3>
-                    <p class="text-sm text-gray-400">熱い実況で対戦の<br>興奮を最大化させる</p>
+
+                <div class="glass-card p-0 overflow-hidden" data-aos="flip-left" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/400x400/1a1a1a/ffffff?text=K-SHIN" alt="K-SHIN" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <p class="accent-pink font-bold mb-2 uppercase text-xs tracking-widest font-title">VALORANT MC</p>
+                        <h3 class="text-2xl font-title mb-4 italic">けーしん さん</h3>
+                        <p class="text-sm text-gray-400">興奮を最大化させる実況</p>
+                    </div>
                 </div>
-                <div class="glass-card p-6" data-aos="flip-left" data-aos-delay="200">
-                    <p class="accent-pink font-bold mb-2 uppercase text-xs tracking-widest">Street Fighter 6 MC</p>
-                    <h3 class="text-2xl font-bold mb-4 italic">菊池 悠太 さん</h3>
-                    <p class="text-sm text-gray-400">格闘ゲームの魅力を<br>熟練のMCで伝えきる</p>
+
+                <div class="glass-card p-0 overflow-hidden" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/400x400/1a1a1a/ffffff?text=KIKUCHI" alt="KIKUCHI" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <p class="accent-pink font-bold mb-2 uppercase text-xs tracking-widest font-title">SF6 MC</p>
+                        <h3 class="text-2xl font-title mb-4 italic text-nowrap">菊池 悠太 さん</h3>
+                        <p class="text-sm text-gray-400">格ゲーの魅力を熟練のMCで</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -215,7 +248,7 @@
     <!-- SNS & Links -->
     <section class="py-24 px-6 bg-white text-black">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-oswald text-4xl mb-12 italic">JOIN OUR COMMUNITY</h2>
+            <h2 class="font-title text-4xl mb-12 italic">JOIN OUR COMMUNITY</h2>
             <div class="flex flex-wrap justify-center gap-8 mb-12 text-4xl">
                 <a href="#" class="hover:text-pink-600 transition"><i class="fab fa-youtube"></i></a>
                 <a href="#" class="hover:text-pink-600 transition"><i class="fab fa-discord"></i></a>
@@ -223,13 +256,13 @@
                 <a href="#" class="hover:text-pink-600 transition"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="flex flex-col md:flex-row gap-4 justify-center font-bold">
-                <a href="#" class="bg-black text-white px-12 py-5 hover:bg-pink transition">YouTube 配信</a>
-                <a href="#" class="border-2 border-black px-12 py-5 hover:bg-black hover:text-white transition">Discord 参加</a>
+                <a href="#" class="bg-black text-white px-12 py-5 hover:bg-pink transition font-title">YouTube 配信</a>
+                <a href="#" class="border-2 border-black px-12 py-5 hover:bg-black hover:text-white transition font-title">Discord 参加</a>
             </div>
         </div>
     </section>
 
-    <!-- Sponsors -->
+    <!-- Footer -->
     <footer class="py-16 px-6 border-t border-white/10">
         <div class="max-w-4xl mx-auto text-center">
             <p class="text-xs tracking-[0.4em] mb-10 opacity-60 uppercase font-bold">Special Sponsors</p>
@@ -247,7 +280,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
