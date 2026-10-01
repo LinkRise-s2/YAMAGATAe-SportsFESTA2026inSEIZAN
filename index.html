@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Noto+Sans+JP:wght@400;500;700;900&family=Teko:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome 6.5.1（Twitter / X アイコンの正常表示対応） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         body {
@@ -109,9 +110,9 @@
                     <span class="h-[2px] sm:h-[3px] w-12 sm:w-28 bg-gradient-to-l from-transparent via-pink-500 to-pink-500"></span>
                 </div>
 
-                <!-- メインタイトル 2: やまがたコスプレミーティング (完全同格・超特大サイズ) -->
+                <!-- メインタイトル 2: やまがたコスプレミーティング (改行：やまがた 改行 コスプレミーティング) -->
                 <div class="font-title text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight leading-none text-white drop-shadow-[0_0_35px_rgba(255,0,122,0.5)]">
-                    やまがた<br class="sm:hidden"><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-200 to-pink-400">コスプレミーティング</span>
+                    やまがた<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-pink-200 to-pink-400">コスプレミーティング</span>
                 </div>
             </div>
 
@@ -148,10 +149,10 @@
             <p class="text-gray-400 text-sm mb-16">カードをタップすると詳細情報を確認できます</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                <!-- VALORANT -->
+                <!-- VALORANT (valo1.jpg を設定) -->
                 <div onclick="openDetailModal('valorant')" class="glass-card overflow-hidden block cursor-pointer group" data-aos="fade-up">
                     <div class="relative overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VALORANT" alt="VALORANT" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                        <img src="valo1.jpg" alt="VALORANT" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-[11px] font-bold text-gray-300 px-3 py-1 rounded-full border border-white/20">
                             詳細を見る <i class="fas fa-arrow-right ml-1 accent-pink"></i>
                         </span>
@@ -169,10 +170,10 @@
                     </div>
                 </div>
 
-                <!-- SF6 -->
+                <!-- SF6 (st6.jpg を設定 / 前夜祭を削除) -->
                 <div onclick="openDetailModal('sf6')" class="glass-card overflow-hidden block cursor-pointer group" data-aos="fade-up" data-aos-delay="100">
                     <div class="relative overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=StreetFighter6" alt="SF6" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                        <img src="st6.jpg" alt="Street Fighter 6" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-[11px] font-bold text-gray-300 px-3 py-1 rounded-full border border-white/20">
                             詳細を見る <i class="fas fa-arrow-right ml-1 accent-pink"></i>
                         </span>
@@ -184,7 +185,7 @@
                         </h3>
                         <p class="text-gray-300 text-sm leading-relaxed mb-4">
                             ガチ対戦会＆初心者体験会。<br>
-                            さらに大人限定の「前夜祭」も！<br>
+                            熱いバトルを会場で体感せよ！<br>
                             <span class="accent-pink font-bold">★マイデバイス持ち込みOK</span>
                         </p>
                     </div>
@@ -278,10 +279,10 @@
                     </div>
                 </div>
 
-                <!-- Keishin -->
+                <!-- Keishin (ksin.jpg を設定) -->
                 <div onclick="openDetailModal('guest-keishin')" class="glass-card p-0 overflow-hidden block cursor-pointer group" data-aos="flip-left" data-aos-delay="100">
                     <div class="relative">
-                        <img src="ksin.jpg/400x400/1a1a1a/ffffff?text=K-SHIN" alt="K-SHIN" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                        <img src="ksin.jpg" alt="けーしん さん" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-[11px] font-bold text-gray-300 px-3 py-1 rounded-full border border-white/20">
                             プロフィール <i class="fas fa-arrow-right ml-1 accent-pink"></i>
                         </span>
@@ -311,7 +312,7 @@
         </div>
     </section>
 
-    <!-- Cosplay Section (コスプレゲスト「いなさん」「上原りせさん」追加) -->
+    <!-- Cosplay Section (ゲスト追加：いなさん、煌輝（きらき）さん、上原りせさん / 参加ジャンル「など」追加) -->
     <section id="cosplay" class="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#120410] via-[#1a0617] to-[#0a0009] border-y border-pink-500/30">
         <!-- 柔らかなピンクのバックライト -->
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-pink-600/20 rounded-full blur-[120px] pointer-events-none"></div>
@@ -321,7 +322,7 @@
                 Cosplay Meeting
             </span>
             <h2 class="font-title text-4xl md:text-6xl lg:text-7xl mb-6 italic leading-tight text-white" data-aos="fade-up">
-                やまがた<br class="md:hidden">コスプレミーティング
+                やまがた<br>コスプレミーティング
             </h2>
             <p class="font-title text-xl md:text-3xl italic accent-pink font-bold tracking-wide" data-aos="fade-up">
                 「なりたい自分になれ。」
@@ -336,7 +337,7 @@
                     コスプレステージショーも開催！
                 </p>
 
-                <!-- スペシャルゲスト紹介枠（いなさん、上原りせさん） -->
+                <!-- スペシャルゲスト紹介枠（いなさん、煌輝（きらき）さん、上原りせさん） -->
                 <div class="bg-gradient-to-r from-pink-950/40 to-black/60 border border-pink-500/40 rounded-xl p-5 mb-6 shadow-lg">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="bg-pink text-white text-[11px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
@@ -344,21 +345,25 @@
                         </span>
                         <span class="text-xs text-pink-300 font-bold">ゲストコスプレイヤー来場決定！</span>
                     </div>
-                    <div class="flex flex-wrap items-baseline gap-4 mt-2">
-                        <div class="font-title text-2xl text-white">
+                    <div class="flex flex-wrap items-baseline gap-3 sm:gap-4 mt-2">
+                        <div class="font-title text-xl sm:text-2xl text-white">
                             いな <span class="text-xs font-normal text-gray-300">さん</span>
                         </div>
                         <div class="text-pink-500 font-bold">/</div>
-                        <div class="font-title text-2xl text-white">
-                            煌輝 <span class="text-xs font-normal text-gray-300">さん</span>
+                        <div class="font-title text-xl sm:text-2xl text-white">
+                            煌輝（きらき） <span class="text-xs font-normal text-gray-300">さん</span>
+                        </div>
+                        <div class="text-pink-500 font-bold">/</div>
+                        <div class="font-title text-xl sm:text-2xl text-white">
+                            上原りせ <span class="text-xs font-normal text-gray-300">さん</span>
                         </div>
                     </div>
                     <p class="text-xs text-gray-300 mt-2 leading-relaxed">
-                        人気コスプレイヤーのお二人がゲストとして会場に登場！特設ステージや撮影スポットを華やかに盛り上げます。
+                        人気コスプレイヤーの皆様がゲストとして会場に登場！特設ステージや撮影スポットを華やかに盛り上げます。
                     </p>
                 </div>
 
-                <!-- 撮影スポット & 参加ジャンル情報ボックス -->
+                <!-- 撮影スポット & 参加ジャンル情報ボックス (語尾に「など」を追加) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                     <div class="bg-black/60 border border-pink-500/30 p-5 rounded-lg shadow-lg">
                         <p class="accent-pink mb-3 font-title text-base flex items-center gap-2">
@@ -374,37 +379,46 @@
                             <i class="fas fa-tags"></i> 参加ジャンル
                         </p>
                         <ul class="text-sm font-medium text-gray-200 space-y-2">
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink rounded-full"></span>ゲームキャラ / スクールキャラ</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink rounded-full"></span>一眼レフ / デジカメ撮影歓迎</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink rounded-full"></span>ゲームキャラ / スクールキャラなど</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-pink rounded-full"></span>一眼レフ / デジカメ撮影歓迎など</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- ゲスト写真ギャラリー -->
-            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                <!-- いなさん 写真カード -->
+            <!-- ゲスト写真ギャラリー (ina.png / kiraki.png / 上原りせさん) -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-4" data-aos="fade-left">
+                <!-- いなさん 写真カード (ina.png) -->
                 <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30">
-                    <img src="ina.png/400x600/1e1022/ffffff?text=INA" alt="いな さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
-                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest Cosplayer</span>
-                        <h4 class="font-title text-xl text-white">いな <span class="text-xs font-normal text-gray-300">さん</span></h4>
+                    <img src="ina.png" alt="いな さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-2.5 sm:p-4">
+                        <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest</span>
+                        <h4 class="font-title text-sm sm:text-lg text-white">いな <span class="text-[10px] sm:text-xs font-normal text-gray-300">さん</span></h4>
                     </div>
                 </div>
 
-                <!-- きらきさん 写真カード -->
-                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30 mt-10">
-                    <img src="kiraki.png/400x600/1e1022/ffffff?text=RISE+UEHARA" alt="煌輝 さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
-                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest Cosplayer</span>
-                        <h4 class="font-title text-xl text-white">煌輝 <span class="text-xs font-normal text-gray-300">さん</span></h4>
+                <!-- 煌輝（きらき）さん 写真カード (kiraki.png) -->
+                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30 mt-4 sm:mt-6">
+                    <img src="kiraki.png" alt="煌輝 さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-2.5 sm:p-4">
+                        <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest</span>
+                        <h4 class="font-title text-sm sm:text-lg text-white">煌輝（きらき） <span class="text-[10px] sm:text-xs font-normal text-gray-300">さん</span></h4>
+                    </div>
+                </div>
+
+                <!-- 上原りせさん 写真カード -->
+                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30">
+                    <img src="https://via.placeholder.com/400x600/1e1022/ffffff?text=RISE+UEHARA" alt="上原りせ さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-2.5 sm:p-4">
+                        <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest</span>
+                        <h4 class="font-title text-sm sm:text-lg text-white">上原りせ <span class="text-[10px] sm:text-xs font-normal text-gray-300">さん</span></h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SNS & Links (YouTube生配信 ＆ Discord参加必須の案内) -->
+    <!-- SNS & Links (YouTube生配信・Discord参加リンク有効化 / Twitterアイコン黒色表示) -->
     <section id="community" class="py-24 px-6 bg-white text-black text-center">
         <div class="max-w-5xl mx-auto">
             <span class="text-xs font-bold uppercase tracking-widest text-pink-600 block mb-2">Live Stream & Official Community</span>
@@ -416,7 +430,7 @@
 
             <!-- YouTube配信 & Discord参加 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 text-left">
-                <!-- YouTube 生配信案内 -->
+                <!-- YouTube 生配信案内 (リンク有効化) -->
                 <div class="bg-gray-50 border-2 border-gray-200 rounded-2xl p-8 flex flex-col justify-between hover:border-red-500 transition duration-300 shadow-sm">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -430,12 +444,12 @@
                             当日会場に来られない方もオンラインでリアルタイム観戦が可能！全ステージのエキシビションマッチや熱き決勝戦の模様を高画質で完全生中継します。
                         </p>
                     </div>
-                    <a href="#" class="w-full block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition duration-200 shadow-md">
+                    <a href="http://www.youtube.com/@APEXSEIZAN" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition duration-200 shadow-md">
                         <i class="fas fa-play-circle mr-2"></i> YouTube配信を観戦する
                     </a>
                 </div>
 
-                <!-- Discord 参加案内（選手必須） -->
+                <!-- Discord 参加案内 (リンク有効化) -->
                 <div class="bg-[#f2f4fb] border-2 border-[#5865F2] rounded-2xl p-8 flex flex-col justify-between hover:shadow-lg transition duration-300 relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-[#5865F2] text-white text-[11px] font-black px-4 py-1 rounded-bl-lg tracking-wider">
                         選手・参加希望者 必須
@@ -453,18 +467,18 @@
                             対戦表の発表、当日の点呼・招集、ルール確認、運営からの緊急連絡はすべてDiscord内で行われます。エントリー済みの方および当日参加希望の方は必ず事前にご参加ください。
                         </p>
                     </div>
-                    <a href="#" class="w-full block text-center bg-[#5865F2] hover:bg-[#4752c4] text-white font-bold py-4 rounded-xl transition duration-200 shadow-md">
+                    <a href="https://discord.gg/CyjU6NygKh" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-[#5865F2] hover:bg-[#4752c4] text-white font-bold py-4 rounded-xl transition duration-200 shadow-md">
                         <i class="fab fa-discord mr-2"></i> 公式Discordに参加する
                     </a>
                 </div>
             </div>
 
-            <!-- 公式SNSアイコン -->
+            <!-- 公式SNSアイコン (Twitter/X を黒で表示 & 各リンク設定) -->
             <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Official Social Media</p>
-            <div class="flex flex-wrap justify-center gap-8 text-3xl text-gray-700">
-                <a href="#" class="hover:text-red-600 transition" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="hover:text-[#5865F2] transition" title="Discord"><i class="fab fa-discord"></i></a>
-                <a href="#" class="hover:text-black transition" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <div class="flex flex-wrap justify-center items-center gap-8 text-3xl text-gray-700">
+                <a href="http://www.youtube.com/@APEXSEIZAN" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://discord.gg/CyjU6NygKh" target="_blank" rel="noopener noreferrer" class="hover:text-[#5865F2] transition" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="#" class="text-black hover:opacity-75 transition" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#" class="hover:text-pink-600 transition" title="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
@@ -477,11 +491,11 @@
             <span>ベルブランシェ・プチ</span>
             <span>井上工業 ( 株 )</span>
             <span>東北クリーン開発 ( 株 )</span>
-            <span>ふるさと創造基金助成事業</span>
+            <span class="border-b-2 border-pink pb-1 text-white">ふるさと創造基金助成事業</span>
         </div>
         <div class="text-[11px] text-gray-500 tracking-wider">
-            <p>主催：惺山高等学校 / 後援：山形市　やまがた秋の芸術祭</p>
-            <p class="mt-4">© YAMAGATA e-SPORTS FESTA IN SEIZAN 2026</p>
+            <p>主催：惺山高等学校 / 後援：山形市 / TUY テレビユー山形</p>
+            <p class="mt-4">© 2026 YAMAGATA e-SPORTS FESTA SEIZAN Executive Committee</p>
         </div>
     </footer>
 
@@ -535,7 +549,7 @@
             'valorant': {
                 category: 'e-Sports / FPS',
                 title: 'VALORANT',
-                image: 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VALORANT',
+                image: 'valo1.jpg',
                 desc: '高校生チームがプライドをかけて激突する学校対抗エキシビションマッチ！さらに当日来場者も参加できる即席チームによるワンデイトーナメントも開催します。実況・解説つきの特設メインステージで熱いバトルを繰り広げよう！',
                 points: [
                     '【対戦形式】5on5 チーム戦（学校対抗トーナメント ＆ 当日即席エントリー枠）',
@@ -546,12 +560,12 @@
             'sf6': {
                 category: 'Fighting Game',
                 title: 'Street Fighter 6',
-                image: 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=StreetFighter6',
-                desc: '世界中で大ヒット中の『ストリートファイター6』対戦ブース！必殺技がワンボタンで出せる「モダン操作」での初心者体験会から、猛者たちがしのぎを削るガチトーナメントまで幅広く実施。さらに前日には大人限定の「前夜祭」も特別開催されます。',
+                image: 'st6.jpg',
+                desc: '世界中で大ヒット中の『ストリートファイター6』対戦ブース！必殺技がワンボタンで出せる「モダン操作」での初心者体験会から、猛者たちがしのぎを削るガチトーナメントまで幅広く実施します。',
                 points: [
                     '【対戦形式】1on1 トーナメント ＆ 終日フリー対戦台設置',
                     '【持ち込み】マイコントローラー・アーケードスティック（アケコン）持ち込み自由',
-                    '【前夜祭＆MC】大人限定の前夜祭開催！さらに当日は「菊池 悠太」さんがMC・実況として会場を盛り上げます！'
+                    '【ステージMC】当日は「菊池 悠太」さんがMC・実況として会場を盛り上げます！'
                 ]
             },
             'hado': {
@@ -601,7 +615,7 @@
             'guest-keishin': {
                 category: 'VALORANT MC / Caster',
                 title: 'けーしん さん',
-                image: 'https://via.placeholder.com/400x400/1a1a1a/ffffff?text=K-SHIN',
+                image: 'ksin.jpg',
                 desc: '数々のVALORANT公式・コミュニティ大会で実況・MCとして活躍する人気キャスター。会場に響き渡る熱い実況と的確な戦況解説で、高校生たちの激闘をプロさながらの興奮へと昇華させます！',
                 points: [
                     '【担当】VALORANT 学校対抗戦＆即席チーム戦 公式実況・ステージMC',
@@ -614,7 +628,7 @@
                 image: 'https://via.placeholder.com/400x400/1a1a1a/ffffff?text=KIKUCHI',
                 desc: '東北の格闘ゲームシーンを牽引する名物実況者。格闘ゲームへの深い造詣と、初心者にも分かりやすく会場を沸かせる巧みなトーク力で『ストリートファイター6』の熱戦を最高潮に盛り上げます！',
                 points: [
-                    '【担当】Street Fighter 6 ガチ対戦会＆大人限定前夜祭 MC・実況解説',
+                    '【担当】Street Fighter 6 ガチ対戦会 MC・実況解説',
                     '【見どころ】バトルの心理戦やハイレベルな駆け引きをユーモアたっぷりに解説'
                 ]
             }
