@@ -317,7 +317,7 @@
         <!-- 柔らかなピンクのバックライト -->
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-pink-600/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div class="max-w-6xl mx-auto text-center mb-16 relative z-10">
+        <div class="max-w-6xl mx-auto text-center mb-12 relative z-10">
             <span class="inline-block bg-pink/20 text-pink-300 border border-pink-500/40 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-4 tracking-wider uppercase">
                 Cosplay Meeting
             </span>
@@ -327,6 +327,25 @@
             <p class="font-title text-xl md:text-3xl italic accent-pink font-bold tracking-wide" data-aos="fade-up">
                 「なりたい自分になれ。」
             </p>
+        </div>
+
+        <!-- 必ず読むものとして表示するコスプレ案内枠 -->
+        <div class="max-w-4xl mx-auto mb-16 relative z-10" data-aos="zoom-in">
+            <div class="bg-gradient-to-r from-pink-950/60 via-red-950/40 to-pink-950/60 border-2 border-pink-500 rounded-2xl p-6 md:p-8 text-center shadow-[0_0_30px_rgba(255,0,122,0.35)] backdrop-blur-md">
+                <div class="inline-flex items-center gap-2 bg-pink text-white text-xs md:text-sm font-black px-4 py-1 rounded-full uppercase tracking-wider mb-4 animate-pulse">
+                    <i class="fas fa-exclamation-triangle"></i> 【参加者必読】
+                </div>
+                <h3 class="font-title text-2xl md:text-3xl text-white mb-2">コスプレイベント参加規約・ガイドライン</h3>
+                <p class="text-sm md:text-base text-pink-300 font-bold mb-3">
+                    やまがたコスプレミーティング in やまがたeスポーツフェスタ SEIZANX
+                </p>
+                <p class="text-xs md:text-sm text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
+                    みんなが安心して楽しめるイベントにするために、コスプレイヤー・カメラマン・来場者の皆さまは参加前に必ず以下のルールをご確認ください。
+                </p>
+                <button onclick="openCosplayGuideModal()" class="inline-flex items-center gap-3 bg-pink hover:bg-pink-600 text-white font-black text-sm md:text-base px-8 py-4 rounded-xl transition duration-300 shadow-[0_0_20px_rgba(255,0,122,0.6)] transform hover:scale-105">
+                    <i class="fas fa-book-open"></i> 参加規約・ルールを必ず読む（詳細はこちら）
+                </button>
+            </div>
         </div>
         
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
@@ -386,11 +405,11 @@
                 </div>
             </div>
 
-            <!-- ゲスト写真ギャラリー (ina.png / kiraki.png / 上原りせさん) -->
+            <!-- ゲスト写真ギャラリー (ina.png / kiraki.png / 上原りせさん) ※eスポーツゲストと同じh-64サイズに設定 -->
             <div class="grid grid-cols-3 gap-3 sm:gap-4" data-aos="fade-left">
                 <!-- いなさん 写真カード (ina.png) -->
                 <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30">
-                    <img src="ina.png" alt="いな さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <img src="ina.png" alt="いな さん" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-2.5 sm:p-4">
                         <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest</span>
                         <h4 class="font-title text-sm sm:text-lg text-white">いな <span class="text-[10px] sm:text-xs font-normal text-gray-300">さん</span></h4>
@@ -398,8 +417,8 @@
                 </div>
 
                 <!-- 煌輝（きらき）さん 写真カード (kiraki.png) -->
-                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30 mt-4 sm:mt-6">
-                    <img src="kiraki.png" alt="煌輝 さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30">
+                    <img src="kiraki.png" alt="煌輝 さん" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-2.5 sm:p-4">
                         <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest</span>
                         <h4 class="font-title text-sm sm:text-lg text-white">煌輝（きらき） <span class="text-[10px] sm:text-xs font-normal text-gray-300">さん</span></h4>
@@ -408,7 +427,7 @@
 
                 <!-- 上原りせさん 写真カード -->
                 <div class="relative group overflow-hidden rounded-lg shadow-2xl border border-pink-500/30">
-                    <img src="uehara2.png" alt="上原りせ さん" class="aspect-[3/4] object-cover w-full group-hover:scale-105 transition duration-500">
+                    <img src="uehara2.png" alt="上原りせ さん" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-2.5 sm:p-4">
                         <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-pink-400 block mb-0.5">Guest</span>
                         <h4 class="font-title text-sm sm:text-lg text-white">上原りせ <span class="text-[10px] sm:text-xs font-normal text-gray-300">さん</span></h4>
@@ -500,7 +519,7 @@
         </div>
     </footer>
 
-    <!-- 詳細表示モーダル (ラインナップ & ゲスト兼用) -->
+    <!-- 詳細表示モーダル (ラインナップ & ゲスト兼用：object-containにより見切れを修正) -->
     <div id="detail-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeDetailModal(event)">
         <div id="modal-card" class="bg-[#121218] border border-white/20 text-white rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300 relative" onclick="event.stopPropagation()">
             <!-- 閉じるボタン -->
@@ -508,10 +527,10 @@
                 <i class="fas fa-times"></i>
             </button>
 
-            <!-- モーダル画像 -->
-            <div class="relative h-60 w-full overflow-hidden bg-black">
-                <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#121218] via-transparent to-transparent"></div>
+            <!-- モーダル画像（見切れ防止のため object-contain に調整） -->
+            <div class="relative h-64 w-full overflow-hidden bg-black flex items-center justify-center">
+                <img id="modal-image" src="" alt="" class="w-full h-full object-contain">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#121218] via-transparent to-transparent pointer-events-none"></div>
                 <span id="modal-category" class="absolute bottom-4 left-6 text-xs font-bold uppercase tracking-widest bg-pink text-white px-3 py-1 rounded">
                     CATEGORY
                 </span>
@@ -540,53 +559,166 @@
         </div>
     </div>
 
+    <!-- コスプレ案内詳細モーダル（必ず読むもの） -->
+    <div id="cosplay-guide-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeCosplayGuideModal(event)">
+        <div id="cosplay-guide-card" class="bg-[#121218] border-2 border-pink-500 text-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300 relative p-6 md:p-8" onclick="event.stopPropagation()">
+            <!-- 閉じるボタン -->
+            <button onclick="closeCosplayGuideModalDirect()" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/70 border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:border-pink-500 transition">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="mb-6 border-b border-pink-500/30 pb-4">
+                <span class="inline-block bg-pink text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                    【必ずご確認ください】
+                </span>
+                <h3 class="font-title text-xl sm:text-2xl text-white font-bold leading-snug">
+                    やまがたコスプレミーティング in やまがたeスポーツフェスタ SEIZANX
+                </h3>
+                <p class="text-pink-400 font-bold text-sm sm:text-base mt-2">
+                    コスプレイベント参加者の皆さまへ みんなが安心して楽しめるイベントにするために
+                </p>
+            </div>
+
+            <div class="text-sm text-gray-200 space-y-6 leading-relaxed">
+                <p class="bg-white/5 p-4 rounded-xl border-l-4 border-pink">
+                    本イベントでは、eスポーツとコスプレを同時開催し、コスプレイヤー・カメラマン・一般来場者の皆さまが交流しながら楽しめる場を目指しています。<br>
+                    会場は高校の施設であり、学生を中心とした運営体制となっております。すべての参加者の皆さまに安心してお過ごしいただくため、以下のルールへのご理解とご協力をお願いいたします。
+                </p>
+
+                <div class="space-y-4">
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">1．コスプレ衣装について</h4>
+                        <ul class="list-disc list-inside space-y-1.5 text-gray-300">
+                            <li>会場が高校であることを踏まえ、過度な露出のある衣装はご遠慮ください。</li>
+                            <li>胸部・臀部など、肌の露出が大きくなる部分については、ボディスーツやインナー等を着用し、露出を防ぐようお願いいたします。</li>
+                            <li>下着が見える衣装や、意図せず肌が露出してしまう服装についても、事前にご確認ください。</li>
+                            <li>更衣や衣装の調整は、指定された場所で行ってください。</li>
+                            <li>eスポーツ会場が体育館となるため、床が凹むようなピンヒール等は安全上お控えください。</li>
+                        </ul>
+                        <p class="mt-3 text-xs text-gray-400">コスプレの表現や個性を尊重しながら、学校という会場にふさわしい服装へのご配慮をお願いいたします。</p>
+                    </div>
+
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">2．リストバンドの着用について</h4>
+                        <p class="mb-2 text-gray-300">参加者の区分を明確にし、円滑な運営と安全管理を行うため、以下のルールを設けています。</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>コスプレイヤー：指定されたコスプレイヤー用カラーのリストバンドを着用してください。</li>
+                            <li>カメラマン：指定されたカメラマン用カラーのリストバンドを着用してください。</li>
+                        </ul>
+                        <p class="mt-3 text-xs text-gray-400">イベント参加中は、スタッフが確認できるよう、リストバンドを常時着用してください。紛失や破損があった場合は、受付スタッフまでお申し出ください。<br>※リストバンドの色は、当日の受付案内に従ってください。</p>
+                    </div>
+
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">3．写真・動画撮影について</h4>
+                        <p class="mb-2 text-gray-300">すべての参加者が安心して過ごせるよう、撮影にあたっては以下の事項をお守りください。</p>
+                        <ul class="list-disc list-inside space-y-1.5 text-gray-300">
+                            <li>コスプレイヤーを撮影する際は、必ず本人の許可を得てください。</li>
+                            <li>撮影を断られた場合や、相手が望んでいない様子の場合は、撮影を控えてください。</li>
+                            <li>無断での接写、身体の一部を強調する撮影、執拗な撮影、追いかけての撮影は禁止します。</li>
+                            <li>撮影を希望しない方や、撮影を控えている方が写り込まないようご配慮ください。</li>
+                            <li>撮影した写真・動画をSNS等に投稿する際は、写っている方のプライバシーや意向に十分配慮してください。</li>
+                            <li>撮影した写真・動画の公開を希望しない方から申し出があった場合は、公開の取り下げ等にご協力ください。</li>
+                            <li>三脚や大型機材など、通行やイベント進行の妨げになる機材の使用については、スタッフの指示に従ってください。</li>
+                        </ul>
+                        <p class="mt-3 text-xs text-gray-400">なお、コスプレイヤーの皆さまも、撮影を希望されない場合は、相手にその旨をお伝えいただいて構いません。お互いの意思を尊重した撮影をお願いいたします。</p>
+                    </div>
+
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">4．eスポーツ会場での撮影について</h4>
+                        <p class="mb-2 text-gray-300">本イベントでは、eスポーツの試合や体験企画も実施します。参加者のプライバシーや競技環境を守るため、以下のルールを設けています。</p>
+                        <ul class="list-disc list-inside space-y-1.5 text-gray-300">
+                            <li>ゲーム画面のみを撮影・録画・キャプチャする行為はご遠慮ください。</li>
+                            <li>会場の雰囲気や参加者を撮影する場合は、撮影対象となる方の許可を得てください。</li>
+                            <li>人物を撮影する場合でも、ゲーム画面やモニターの映像が主体とならないようご配慮ください。</li>
+                            <li>試合中のプレイヤーや配信・運営機材の撮影については、スタッフの案内に従ってください。</li>
+                        </ul>
+                        <p class="mt-3 text-xs text-gray-400">撮影に関して判断に迷う場合は、撮影前にスタッフへご確認ください。</p>
+                    </div>
+
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">5．SNSへの投稿について</h4>
+                        <p class="mb-2 text-gray-300">イベントの思い出を共有することは歓迎しておりますが、投稿の際は以下の点にご配慮ください。</p>
+                        <ul class="list-disc list-inside space-y-1.5 text-gray-300">
+                            <li>写真・動画に写っている方のプライバシーを尊重してください。</li>
+                            <li>本人の許可なく、個人を特定できる情報や、公開を望まない写真・動画を投稿することはお控えください。</li>
+                            <li>他の参加者や学校、関係者への誹謗中傷、侮辱的な投稿はおやめください。</li>
+                            <li>撮影や投稿について、相手から削除等の申し出があった場合は、誠実な対応をお願いいたします。</li>
+                        </ul>
+                        <p class="mt-3 text-xs text-gray-400">皆さまの素敵な思い出が、参加者同士の交流やイベントの魅力を広げるものとなるよう、ご協力をお願いいたします。</p>
+                    </div>
+
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">6．会場内でのマナー・安全管理について</h4>
+                        <ul class="list-disc list-inside space-y-1.5 text-gray-300">
+                            <li>立入禁止区域や、イベントで指定された場所以外への立入りは禁止します。</li>
+                            <li>学校の備品・設備を大切に扱い、施設を汚損する行為はおやめください。</li>
+                            <li>通路や出入口を塞ぐ行為、他の参加者の通行を妨げる行為はご遠慮ください。</li>
+                            <li>他の参加者への無断接触、つきまとい、迷惑行為、威圧的な言動は禁止します。</li>
+                            <li>貴重品は各自で管理してください。</li>
+                            <li>体調不良やトラブルが発生した場合は、近くのスタッフまでお知らせください。</li>
+                            <li>飲食については、会場で指定されたルールに従ってください。</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black/50 p-4 rounded-xl border border-white/10">
+                        <h4 class="font-bold text-pink-400 text-base mb-2">7．ルール違反やトラブルへの対応について</h4>
+                        <p class="text-gray-300 leading-relaxed">
+                            参加者の皆さまの安全確保と円滑なイベント運営のため、スタッフから注意や確認を行う場合があります。<br>
+                            注意事項に従っていただけない場合や、他の参加者の安全・プライバシーを侵害する行為が確認された場合には、撮影の中止、会場からの退出など、運営の判断により必要な対応を行うことがあります。<br>
+                            トラブルを発見した場合は、参加者同士で直接解決しようとせず、スタッフまでお知らせください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeCosplayGuideModalDirect()" class="bg-pink hover:bg-pink-600 text-white px-8 py-3 rounded-xl text-sm font-bold transition shadow-lg">
+                    確認しました（閉じる）
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900, once: true });
 
-        // 詳細データ（ラインナップおよびゲスト）
+        // 詳細データ（画像ファイル名と設定を完全一致化）
         const detailsData = {
             'valorant': {
                 category: 'e-Sports / FPS',
                 title: 'VALORANT',
                 image: 'valo1.jpg',
                 desc: '高校生チームがプライドをかけて激突する学校対抗エキシビションマッチ！さらに当日来場者も参加できる即席チームによるワンデイトーナメントも開催します。実況・解説つきの特設メインステージで熱いバトルを繰り広げよう！',
-               points: [
+                points: [
                     '【対戦形式】5on5 チーム戦（学校対抗トーナメント ＆ 当日即席エントリー枠）',
-                　  '【試合形式】Bo1（Best of 1／1試合勝負）',
+                    '【試合形式】Bo1（Best of 1／1試合勝負）',
                     '【デバイス】マウス、キーボード、ヘッドセット等、使い慣れたマイデバイス持ち込み大歓迎（会場での標準機材貸出もあり）',
                     '【ステージ実況】eスポーツキャスター「けーしん」さんによる熱狂の公式実況つき！',
                     '【オープニングセレモニー】10:30～',
                     '【試合時間】11:00～14:00予定',
                     '【ゲームタイトル】VALORANT',
                     '【プラットフォーム】PC',
-
                     '【使用マップ】アセント、アビス、ロータス、スプリット、ヘイブン、サンセット',
                     '【サーバー】Tokyo',
                     '【モード】スタンダード',
                     '【トーナメントモード】ON・オーバータイム：2勝差',
                     '【チート】ON',
-
                     '【エントリー】最大24チーム',
                     '【試合数】全12試合を予定（参加チームの状況により、1チームが2試合行う場合があります）',
-
                     '【マップ選択】ダイス機能を使用し、Discord内でバン・ピックを行います。',
                     '【攻守決定】アタッカーとディフェンダーはDiscordのダイス機能を使用して決定します。',
-
                     '【Discord】大会に関する連絡・マップ選択・攻守決定などをDiscord内で行います。参加者は必ずDiscordへ参加してください。',
-
                     '【使用機材】オンライン大会形式のため、各自でプレイ環境をご準備ください。',
                     '【マイデバイス】マウス・キーボード・ヘッドセットなど、使い慣れた機材の持ち込みを推奨します。',
                     '【会場設備】本戦は惺山高校e-Sports部が準備できる機材を使用します。',
-
                     '【注意事項】会場では自分のマウス・マウスパッド・キーボード・ヘッドセットなどを持ち込んで使用できます。',
                     '【注意事項】接続の不具合については本校部員がお手伝いしますが、万一不調などがございましたらご容赦ください。会場は貸し出しのみで、イヤホンなどの準備はありません。',
                     '【その他】セキュリティ・安全性・進行上の問題から、運営側から使用の中止等をお願いする場合があります。その際は指示に従ってください。',
-
                     '【配信】会場Aの試合は配信を行い、会場内でも放映！'
-    ]
-},
+                ]
+            },
             'sf6': {
                 category: 'Fighting Game',
                 title: 'Street Fighter 6',
@@ -601,7 +733,7 @@
             'hado': {
                 category: 'AR Techno Sports',
                 title: 'HADO',
-                image: 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=HADO',
+                image: 'KV_4.jpg',
                 desc: '頭にヘッドマウントディスプレイ、腕にアームセンサーを装着してプレイする最新ARスポーツ！自らの手から放たれる魔法のようなエナジーボールとシールドを展開し、仲間と連携して勝利をつかみ取れ！',
                 points: [
                     '【参加形式】最大3on3のAR対戦（個人・友達同士での参加OK）',
@@ -612,7 +744,7 @@
             'gt': {
                 category: 'Driving Simulator',
                 title: 'Gran Turismo',
-                image: 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=GranTurismo',
+                image: 'grant.jpg',
                 desc: 'プロレーサーの訓練にも使用される高精度ステアリングコントローラーとバケットシートを完備した本格ドライビングシミュレーター。リアルなGとグラフィックで特設サーキットの最速ラップタイムに挑め！',
                 points: [
                     '【競技内容】特設コースでのタイムアタックチャレンジ（上位者には記念品あり）',
@@ -623,7 +755,7 @@
             'vr': {
                 category: 'Virtual Reality',
                 title: 'VR Experience',
-                image: 'https://via.placeholder.com/600x400/1a1a1a/ffffff?text=VR+Experience',
+                image: 'VR.png',
                 desc: '山形大学VR部とのスペシャルタイアップブース！最新のVRゴーグルを装着し、360度広がるバーチャル空間を体感。現実を超越した没入型コンテンツをぜひご体験ください。',
                 points: [
                     '【協力】山形大学 VR部',
@@ -634,7 +766,7 @@
             'guest-sendai': {
                 category: 'Broadcasting Crew',
                 title: '仙台デザイン＆テクノロジー専門学校',
-                image: 'https://via.placeholder.com/400x400/1a1a1a/ffffff?text=Sendai+Design',
+                image: 'sendaiDT.jpg',
                 desc: 'エンターテインメント業界のプロを育成する専門学校。本イベントのメインステージの音響・照明、およびYouTube公式生配信のマルチカメラスイッチングをプロ仕様の機材とともに全面バックアップ！現場直結のクオリティをお届けします。',
                 points: [
                     '【担当】YouTube公式生配信オペレーション・ステージ音響演出',
@@ -655,7 +787,7 @@
             'guest-kikuchi': {
                 category: 'SF6 MC / Commentator',
                 title: '菊池 悠太 さん',
-                image: 'https://via.placeholder.com/400x400/1a1a1a/ffffff?text=KIKUCHI',
+                image: 'kikuchi3.jpeg',
                 desc: '東北の格闘ゲームシーンを牽引する名物実況者。格闘ゲームへの深い造詣と、初心者にも分かりやすく会場を沸かせる巧みなトーク力で『ストリートファイター6』の熱戦を最高潮に盛り上げます！',
                 points: [
                     '【担当】Street Fighter 6 ガチ対戦会 MC・実況解説',
@@ -664,7 +796,7 @@
             }
         };
 
-        // モーダルを開く関数
+        // 詳細モーダル（ラインナップ & ゲスト）
         function openDetailModal(key) {
             const data = detailsData[key];
             if (!data) return;
@@ -691,7 +823,6 @@
             document.body.style.overflow = 'hidden';
         }
 
-        // モーダルを閉じる関数
         function closeDetailModalDirect() {
             const modal = document.getElementById('detail-modal');
             const card = document.getElementById('modal-card');
@@ -706,10 +837,34 @@
             }
         }
 
+        // コスプレ案内詳細モーダル（必読）
+        function openCosplayGuideModal() {
+            const modal = document.getElementById('cosplay-guide-modal');
+            const card = document.getElementById('cosplay-guide-card');
+            modal.classList.add('modal-active');
+            card.classList.add('modal-content-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCosplayGuideModalDirect() {
+            const modal = document.getElementById('cosplay-guide-modal');
+            const card = document.getElementById('cosplay-guide-card');
+            modal.classList.remove('modal-active');
+            card.classList.remove('modal-content-active');
+            document.body.style.overflow = '';
+        }
+
+        function closeCosplayGuideModal(e) {
+            if (e.target.id === 'cosplay-guide-modal') {
+                closeCosplayGuideModalDirect();
+            }
+        }
+
         // ESCキーで閉じる
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeDetailModalDirect();
+                closeCosplayGuideModalDirect();
             }
         });
     </script>
